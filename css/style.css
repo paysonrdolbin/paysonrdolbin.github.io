@@ -17,7 +17,7 @@
   --sidebar-muted: #9c9ea0;
   --sidebar-rule: #3a3b3d;
 
-  --accent: #d08a3c;          /* warm key light */
+  --accent: #2a9d8f;          /* teal */
   --media-bg: #111;
 
   --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -266,6 +266,24 @@ a { color: inherit; }
 .gallery__img--active { opacity: 1; }
 .gallery__img:not(.gallery__img--active) { pointer-events: none; }
 video.gallery__img, .gallery__embed { cursor: default; }
+video[data-autoplay] { cursor: pointer; }
+.clip-toggle {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  width: 36px; height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, .6);
+  color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background .2s;
+}
+.clip-toggle:hover { background: rgba(20, 20, 20, .85); }
+.clip-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.clip-toggle svg { width: 16px; height: 16px; }
 .gallery__embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 /* Arrows sit on the image edges and show on hover (always visible on touch screens). */
@@ -295,7 +313,7 @@ video.gallery__img, .gallery__embed { cursor: default; }
 .gallery__meta {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 12px;
   margin-top: 10px;
   font-family: var(--font-mono);
@@ -303,7 +321,12 @@ video.gallery__img, .gallery__embed { cursor: default; }
   color: var(--text-faint);
   min-height: 1.2em;
 }
-.gallery__caption { color: var(--text-muted); }
+.gallery__caption {
+  font-family: var(--font-sans);
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--text);
+}
 
 .gallery__thumbs {
   display: flex;

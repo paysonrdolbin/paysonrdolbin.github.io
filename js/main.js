@@ -128,6 +128,42 @@
     show(0);
   });
 
+  // ---------- Autoplaying clips ----------
+  // Short muted loops (data-autoplay) play while on screen and pause when scrolled away.
+  // Clicking the clip or its button toggles play/pause; a clip the viewer paused stays paused.
+  const PAUSE_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>';
+  const PLAY_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+  const autoClips = [...document.querySelectorAll("video[data-autoplay]")];
+  autoClips.forEach((v) => {
+    const btn = document.createElement("button");
+    btn.className = "clip-toggle";
+    v.insertAdjacentElement("afterend", btn);
+    const sync = () => {
+      btn.innerHTML = v.paused ? PLAY_ICON : PAUSE_ICON;
+      btn.setAttribute("aria-label", v.paused ? "Play clip" : "Pause clip");
+    };
+    const toggle = (e) => {
+      e.stopPropagation();
+      if (v.paused) { v.dataset.userPaused = ""; v.play().catch(() => {}); }
+      else { v.dataset.userPaused = "1"; v.pause(); }
+    };
+    v.addEventListener("play", sync);
+    v.addEventListener("pause", sync);
+    v.addEventListener("click", toggle);
+    btn.addEventListener("click", toggle);
+    sync();
+  });
+  if (autoClips.length && "IntersectionObserver" in window &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { if (!e.target.dataset.userPaused) e.target.play().catch(() => {}); }
+        else e.target.pause();
+      });
+    }, { threshold: 0.25 });
+    autoClips.forEach((v) => io.observe(v));
+  }
+
   // ---------- Scrollspy for sidebar section links ----------
   const sublinks = [...document.querySelectorAll(".nav__sublink[href^='#']")];
   const targets = sublinks

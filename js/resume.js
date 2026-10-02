@@ -16,7 +16,11 @@
 
   let pdf;
   try {
-    pdf = await pdfjsLib.getDocument(url).promise;
+    // Always fetch a fresh copy so a replaced PDF shows up immediately. The unique query
+    // string skips GitHub Pages' CDN cache as well as the browser's (it's a small file).
+    const res = await fetch(`${url}?v=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(res.status);
+    pdf = await pdfjsLib.getDocument({ data: await res.arrayBuffer() }).promise;
   } catch (e) {
     return fail();
   }

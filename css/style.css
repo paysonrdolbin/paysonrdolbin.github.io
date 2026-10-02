@@ -505,3 +505,24 @@ video.gallery__img, .gallery__embed { cursor: default; }
   border-color: transparent transparent transparent #fff;
   filter: drop-shadow(0 0 3px rgba(0,0,0,.6));
 }
+
+/* ---------- Toast ---------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 120;
+  transform: translate(-50%, 12px);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  font-size: .85rem;
+  font-weight: 500;
+  box-shadow: 0 6px 24px rgba(0,0,0,.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+}
+.toast--show { opacity: 1; transform: translate(-50%, 0); }

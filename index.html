@@ -4,225 +4,124 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Payson Dolbin | Lighting &amp; Compositing</title>
-  <meta name="description" content="Payson Dolbin — Lighting Artist &amp; Lighting TD. Demo reel and shot breakdowns.">
+  <meta name="description" content="Payson Dolbin — Lighting Artist &amp; Lighting TD. Demo reel and project breakdowns.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&amp;family=Figtree:wght@400;600;700&amp;display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/intro.js"></script>
 </head>
 <body>
-  <button class="hamburger" aria-label="Toggle navigation menu">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-  </button>
-  <div class="mobile-overlay"></div>
-
-  <div class="site-wrapper">
+  <div class="shell" id="top">
     <aside class="sidebar">
-      <header>
-        <a href="index.html" class="sidebar__name-link"><h1 class="sidebar__name">Payson Dolbin</h1></a>
-        <p class="sidebar__tagline">Lighting Artist &amp; TD</p>
-        <a class="sidebar__email" href="mailto:paysondolbin@gmail.com" title="Click to copy">paysondolbin@gmail.com</a>
-      </header>
-
+      <div class="sidebar__brand">
+        <a href="#top" class="sidebar__name">Payson<br>Dolbin</a>
+        <div class="sidebar__role label">Lighting Artist &amp; TD</div>
+      </div>
       <nav class="sidebar__nav" aria-label="Main">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="index.html" class="nav__link nav__link--active">Lighting &amp; Compositing</a>
-            <ul class="nav__sublist">
-              <li><a href="#demo-reel" class="nav__sublink">Demo Reel</a></li>
-              <li><a href="#breakdowns" class="nav__sublink">Breakdowns</a></li>
-              <li><a href="#group-projects" class="nav__sublink nav__sublink--nested">Group Projects</a></li>
-              <li><a href="#honey-business" class="nav__sublink nav__sublink--deep">Honey Business</a></li>
-              <li><a href="#sandwich-kwon-do" class="nav__sublink nav__sublink--deep">Sandwich Kwon Do</a></li>
-              <li><a href="#scuttle" class="nav__sublink nav__sublink--deep">Scuttle</a></li>
-              <li><a href="#personal-projects" class="nav__sublink nav__sublink--nested">Personal Projects</a></li>
-            </ul>
-          </li>
-          <li class="nav__item"><a href="lighting-td.html" class="nav__link">Lighting TD</a></li>
-          <li class="nav__item"><a href="resume.html" class="nav__link">Resume</a></li>
-          <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-        </ul>
+        <a href="index.html" class="nav-link nav-link--active" aria-current="page">Lighting &amp; Compositing</a>
+        <a href="lighting-td.html" class="nav-link">Lighting TD</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="about.html" class="nav-link">About</a>
       </nav>
-
-      <div class="sidebar__social">
-        <a class="social__link" href="https://www.linkedin.com/in/payson-dolbin-346336221/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a class="social__link" href="https://github.com/paysonrdolbin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
+      <div class="sidebar__contact">
+        <a class="sidebar__email" href="mailto:paysondolbin@gmail.com" title="Click to copy">paysondolbin@gmail.com</a>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/payson-dolbin-346336221/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://github.com/paysonrdolbin" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+        </div>
       </div>
     </aside>
 
-    <main class="main-content">
-      <div class="content-wrapper">
+    <main class="main">
+      <section class="reel" aria-label="Demo reel">
+        <div class="reel__frame">
+          <iframe src="https://player.vimeo.com/video/1138259296?title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"
+                  allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                  referrerpolicy="strict-origin-when-cross-origin" title="Demo Reel 2026"></iframe>
+        </div>
+        <div class="reel__meta"><span>Demo Reel 2026</span><span>Lighting · Rendering · Compositing</span></div>
+      </section>
 
-        <!-- Demo Reel -->
-        <section id="demo-reel" class="page-section">
-          <h2 class="section-title">Demo Reel</h2>
-          <div class="video-embed">
-            <iframe src="https://player.vimeo.com/video/1138259296?title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    title="Payson Dolbin Demo Reel 2026" loading="lazy"></iframe>
-          </div>
-        </section>
+      <section class="projects" aria-labelledby="group-projects">
+        <div class="projects__head">
+          <h2 class="projects__title" id="group-projects">Group Projects</h2>
+          <span class="projects__count label">3 projects</span>
+        </div>
+        <div class="mosaic">
+          <button class="tile" type="button" data-project="0" style="--span:6;--aspect:21/9">
+            <span class="tile__frame"><span class="tile__inner"><img src="assets/stills/honey-business/c250.jpg" alt="" loading="lazy"></span></span>
+            <span class="tile__text">
+              <span class="tile__title">Honey Business</span>
+              <span class="tile__meta">Short film · Lighting Artist, Render Artist</span>
+            </span>
+          </button>
+          <button class="tile" type="button" data-project="1" style="--span:3;--aspect:4/3">
+            <span class="tile__frame"><span class="tile__inner"><img src="assets/stills/sandwich-kwon-do/z030a.jpg" alt="" loading="lazy"></span></span>
+            <span class="tile__text">
+              <span class="tile__title">Sandwich Kwon Do</span>
+              <span class="tile__meta">Short film · Lighting Artist, Lighting TD</span>
+            </span>
+          </button>
+          <button class="tile" type="button" data-project="2" style="--span:3;--aspect:4/3">
+            <span class="tile__frame"><span class="tile__inner"><img src="assets/stills/scuttle/scuttle-04.jpg" alt="" loading="lazy"></span></span>
+            <span class="tile__text">
+              <span class="tile__title">Scuttle</span>
+              <span class="tile__meta">Short film · Lighting Lead</span>
+            </span>
+          </button>
+        </div>
+      </section>
 
-        <!-- Breakdowns -->
-        <section id="breakdowns" class="page-section">
-          <h2 class="section-title">Breakdowns</h2>
-          <p class="section-intro">A closer look at each piece in the reel. Full breakdowns with passes and lighting setups are in progress.</p>
+      <section class="projects projects--rule" aria-labelledby="personal-projects">
+        <div class="projects__head">
+          <h2 class="projects__title" id="personal-projects">Personal Projects</h2>
+          <span class="projects__count label">5 projects</span>
+        </div>
+        <div class="mosaic">
+          <button class="tile" type="button" data-project="3" style="--span:3;--aspect:16/10">
+            <span class="tile__frame"><span class="tile__inner"><img src="assets/video/coral-reef-poster.jpg" alt="" loading="lazy"></span></span>
+            <span class="tile__text">
+              <span class="tile__title">Coral Reef</span>
+              <span class="tile__meta">Personal · Lighting</span>
+            </span>
+          </button>
+          <button class="tile" type="button" data-project="4" style="--span:3;--aspect:16/10;--inset:-16% 0">
+            <span class="tile__frame"><span class="tile__inner"><img src="assets/video/coffee-shop-poster.jpg" alt="" loading="lazy"></span></span>
+            <span class="tile__text">
+              <span class="tile__title">Coffee Shop</span>
+              <span class="tile__meta">Personal · Lighting</span>
+            </span>
+          </button>
+          <button class="tile" type="button" data-project="5" style="--span:2;--aspect:4/5">
+            <span class="tile__frame"><span class="tile__inner"><img src="assets/stills/retro-nes/nes-comp.jpg" alt="" loading="lazy"></span></span>
+            <span class="tile__text">
+              <span class="tile__title">Retro NES Composite</span>
+              <span class="tile__meta">Personal · Lighting, Compositing</span>
+            </span>
+          </button>
+          <button class="tile" type="button" data-project="6" style="--span:2;--aspect:4/5">
+            <span class="tile__frame"><span class="tile__inner"><img src="assets/video/downtown-poster.jpg" alt="" loading="lazy"></span></span>
+            <span class="tile__text">
+              <span class="tile__title">Downtown West</span>
+              <span class="tile__meta">Personal · Lighting</span>
+            </span>
+          </button>
+          <button class="tile" type="button" data-project="7" style="--span:2;--aspect:4/5">
+            <span class="tile__frame"><span class="tile__inner"><img src="assets/stills/ramen/ramen-01.jpg" alt="" loading="lazy"></span></span>
+            <span class="tile__text">
+              <span class="tile__title">Ramen Bowl</span>
+              <span class="tile__meta">Personal · All Aspects</span>
+            </span>
+          </button>
+        </div>
+      </section>
 
-          <h3 id="group-projects" class="subsection-title subsection-title--first">Group Projects</h3>
-
-          <article id="honey-business" class="project">
-            <div class="project__header">
-              <h3 class="project__title">Honey Business (Short Film)</h3>
-              <div class="project__roles"><span class="role-tag">Lighting Artist</span><span class="role-tag">Render Artist</span></div>
-            </div>
-            <p class="project__software"><span class="sw"><img src="assets/icons/houdini.png" alt="" width="16" height="16">Houdini/Solaris</span><span class="sw"><img src="assets/icons/renderman.svg" alt="" width="16" height="16">RenderMan</span><span class="sw"><img src="assets/icons/nuke.png" alt="" width="16" height="16">Nuke</span></p>
-            <div class="project__desc">
-              <ul>
-                <li>Tuned RenderMan path tracer settings to make dailies render 6–10x faster.</li>
-                <li>Set up render layers and LPEs so compositors could control lights, objects and scattering types separately.</li>
-                <li>Managed the production's render farm to keep shots moving.</li>
-              </ul>
-            </div>
-            <div class="gallery">
-              <div class="gallery__stage">
-                <img class="gallery__img" src="assets/stills/honey-business/c250.jpg" alt="Honey Business — bear close-up in the forest">
-                <img class="gallery__img" src="assets/stills/honey-business/d040.jpg" alt="Honey Business — bear behind the garden gate" loading="lazy">
-                <img class="gallery__img" src="assets/stills/honey-business/f210.jpg" alt="Honey Business — honey pour" loading="lazy">
-                <div class="gallery__img gallery__embed" data-poster="assets/stills/honey-business/film-thumb.jpg" data-caption="Full film · Password: watchBobo">
-                  <iframe src="https://player.vimeo.com/video/1187515149?title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"
-                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                          referrerpolicy="strict-origin-when-cross-origin"
-                          title="Honey Business full film" loading="lazy"></iframe>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article id="sandwich-kwon-do" class="project">
-            <div class="project__header">
-              <h3 class="project__title">Sandwich Kwon Do (Short Film)</h3>
-              <div class="project__roles"><span class="role-tag">Lighting Artist</span><span class="role-tag">Lighting TD</span></div>
-            </div>
-            <p class="project__software"><span class="sw"><img src="assets/icons/houdini.png" alt="" width="16" height="16">Houdini/Solaris</span><span class="sw"><img src="assets/icons/renderman.svg" alt="" width="16" height="16">RenderMan</span><span class="sw"><img src="assets/icons/nuke.png" alt="" width="16" height="16">Nuke</span></p>
-            <div class="project__desc">
-              <ul>
-                <li>Led a team of lighters through lighting test shots and film sequences.</li>
-                <li>Built stylized lighting tools for painterly volumetrics, depth of field and shadows.</li>
-                <li>Optimized rendering tools for easier use and quicker iterations.</li>
-              </ul>
-            </div>
-            <div class="gallery">
-              <div class="gallery__stage">
-                <img class="gallery__img" src="assets/stills/sandwich-kwon-do/z020.jpg" alt="Sandwich Kwon Do — open sign in the shop window" loading="lazy">
-                <img class="gallery__img" src="assets/stills/sandwich-kwon-do/z030a.jpg" alt="Sandwich Kwon Do — lit window at night" loading="lazy">
-                <img class="gallery__img" src="assets/stills/sandwich-kwon-do/z030b.jpg" alt="Sandwich Kwon Do — storefront" loading="lazy">
-              </div>
-            </div>
-          </article>
-
-          <article id="scuttle" class="project">
-            <div class="project__header">
-              <h3 class="project__title">Scuttle (Short Film)</h3>
-              <div class="project__roles"><span class="role-tag">Lighting Lead</span></div>
-            </div>
-            <p class="project__software"><span class="sw"><img src="assets/icons/unreal.png" alt="" width="16" height="16">Unreal Engine 5</span></p>
-            <div class="project__desc">
-              <ul>
-                <li>Led lighting in Unreal Engine 5, turning 2D concept art into 3D environments.</li>
-                <li>Managed a team of lighters to keep the film consistent and cinematic on a tight schedule.</li>
-              </ul>
-            </div>
-            <div class="gallery">
-              <div class="gallery__stage gallery__stage--wide">
-                <img class="gallery__img" src="assets/stills/scuttle/scuttle-04.jpg" alt="Scuttle — crabs meeting on the beach" loading="lazy">
-                <img class="gallery__img" src="assets/stills/scuttle/scuttle-01.jpg" alt="Scuttle — hermit crab under a leaf" loading="lazy">
-                <video class="gallery__img" src="assets/video/scuttle.mp4" poster="assets/video/scuttle-poster.jpg" controls playsinline preload="none" data-caption="Full film"></video>
-              </div>
-            </div>
-          </article>
-
-          <!-- Personal Projects -->
-          <div id="personal-projects" class="project">
-            <h3 class="subsection-title">Personal Projects</h3>
-
-            <article id="coral-reef" class="project">
-              <div class="project__header">
-                <h3 class="project__title">Coral Reef</h3>
-                <div class="project__roles"><span class="role-tag">Lighting</span></div>
-              </div>
-              <p class="project__software"><span class="sw"><img src="assets/icons/houdini.png" alt="" width="16" height="16">Houdini/Solaris</span><span class="sw"><img src="assets/icons/renderman.svg" alt="" width="16" height="16">RenderMan</span><span class="sw"><img src="assets/icons/nuke.png" alt="" width="16" height="16">Nuke</span></p>
-              <div class="gallery">
-                <div class="gallery__stage">
-                  <video class="gallery__img" src="assets/video/coral-reef.mp4" poster="assets/video/coral-reef-poster.jpg" muted loop playsinline preload="metadata" data-autoplay aria-label="Coral Reef — full clip"></video>
-                </div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div class="project__header">
-                <h3 class="project__title">Retro NES Composite</h3>
-                <div class="project__roles"><span class="role-tag">Lighting</span><span class="role-tag">Compositing</span></div>
-              </div>
-              <p class="project__software"><span class="sw"><img src="assets/icons/substance.png" alt="" width="16" height="16">Substance Painter</span><span class="sw"><img src="assets/icons/karma.svg" alt="" width="16" height="16">Karma</span><span class="sw"><img src="assets/icons/nuke.png" alt="" width="16" height="16">Nuke</span></p>
-              <div class="gallery">
-                <div class="gallery__stage">
-                  <img class="gallery__img" src="assets/stills/retro-nes/nes-comp.jpg" alt="Retro NES setup — final composite" data-caption="Composite" loading="lazy">
-                  <img class="gallery__img" src="assets/stills/retro-nes/nes-without.jpg" alt="Retro NES setup — original render" data-caption="Original Image" loading="lazy">
-                </div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div class="project__header">
-                <h3 class="project__title">Coffee Shop</h3>
-                <div class="project__roles"><span class="role-tag">Lighting</span></div>
-              </div>
-              <p class="project__software"><span class="sw"><img src="assets/icons/unreal.png" alt="" width="16" height="16">Unreal Engine</span></p>
-              <div class="gallery">
-                <div class="gallery__stage">
-                  <video class="gallery__img" src="assets/video/coffee-shop.mp4" poster="assets/video/coffee-shop-poster.jpg" muted loop playsinline preload="metadata" data-autoplay aria-label="Coffee Shop — full clip"></video>
-                </div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div class="project__header">
-                <h3 class="project__title">Downtown West</h3>
-                <div class="project__roles"><span class="role-tag">Lighting</span></div>
-              </div>
-              <p class="project__software"><span class="sw"><img src="assets/icons/unreal.png" alt="" width="16" height="16">Unreal Engine</span></p>
-              <div class="gallery">
-                <div class="gallery__stage">
-                  <video class="gallery__img" src="assets/video/downtown.mp4" poster="assets/video/downtown-poster.jpg" muted loop playsinline preload="metadata" data-autoplay aria-label="Downtown West — full clip"></video>
-                </div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div class="project__header">
-                <h3 class="project__title">Ramen Bowl</h3>
-                <div class="project__roles"><span class="role-tag">All Aspects</span></div>
-              </div>
-              <p class="project__software"><span class="sw"><img src="assets/icons/maya.png" alt="" width="16" height="16">Maya</span><span class="sw"><img src="assets/icons/substance.png" alt="" width="16" height="16">Substance Painter</span><span class="sw"><img src="assets/icons/arnold.png" alt="" width="16" height="16">Arnold</span></p>
-              <div class="gallery">
-                <div class="gallery__stage">
-                  <img class="gallery__img" src="assets/stills/ramen/ramen-01.jpg" alt="Ramen bowl still life" loading="lazy">
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-      </div>
+      <footer class="site-footer"><a href="mailto:paysondolbin@gmail.com">Get in touch →</a></footer>
     </main>
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

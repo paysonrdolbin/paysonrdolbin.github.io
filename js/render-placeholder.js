@@ -14,7 +14,7 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // ---------- Gobo (the cut-out the spotlight shines through) ----------
-  try { await document.fonts.load('700 100px "Manrope"'); } catch (e) { /* fall back to system font */ }
+  try { await Promise.all([document.fonts.load('100px "Caprasimo"'), document.fonts.load('600 34px "Figtree"')]); } catch (e) { /* fall back to system font */ }
   const MW = 1024, MH = 512;
   const goboCanvas = document.createElement("canvas");
   goboCanvas.width = MW; goboCanvas.height = MH;
@@ -31,10 +31,10 @@
   g.fillStyle = "#fff";
   g.textAlign = "center";
   g.textBaseline = "middle";
-  g.font = '700 132px "Manrope", "Helvetica Neue", Arial, sans-serif';
+  g.font = '124px "Caprasimo", Georgia, serif';
   g.fillText("WORK IN", MW / 2, MH * 0.33);
   g.fillText("PROGRESS", MW / 2, MH * 0.6);
-  g.font = '500 34px "IBM Plex Mono", ui-monospace, Menlo, monospace';
+  g.font = '600 34px "Figtree", system-ui, sans-serif';
   g.fillText("TD REEL  ·  COMING SOON", MW / 2, MH * 0.82);
   const gobo = g.getImageData(0, 0, MW, MH).data;
   const goboAt = (u, v) => { // u, v in [0, 1)

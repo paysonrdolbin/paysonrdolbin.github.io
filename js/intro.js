@@ -15,19 +15,19 @@
   root.classList.add("intro-cover");
   const style = document.createElement("style");
   style.textContent = `
-    html.intro-cover::before { content: ""; position: fixed; inset: 0; background: #111; z-index: 9998; }
+    html.intro-cover::before { content: ""; position: fixed; inset: 0; background: #2e2b25; z-index: 9998; }
     .intro { position: fixed; inset: 0; z-index: 9999; cursor: pointer;
              transition: opacity .4s ease; }
     .intro--done { opacity: 0; pointer-events: none; }
     .intro canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
     .intro__status { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between;
-                     gap: 16px; padding: 10px 16px; font: 12px "IBM Plex Mono", ui-monospace, Menlo, monospace;
-                     color: #8a8a8a; border-top: 1px solid #262626; background: rgba(17,17,17,.85); }
-    .intro__status b { color: #e6e6e6; font-weight: 500; }
-    .intro__bar { position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: #2a9d8f; }
-    .intro__skip { position: absolute; top: 14px; right: 16px; font: 12px "IBM Plex Mono", ui-monospace, Menlo, monospace;
-                   color: #8a8a8a; background: none; border: 1px solid #333; border-radius: 4px; padding: 4px 10px; cursor: pointer; }
-    .intro__skip:hover { color: #e6e6e6; border-color: #555; }
+                     gap: 16px; padding: 10px 16px; font: 12px ui-monospace, "SF Mono", Menlo, monospace;
+                     color: #a39b8e; border-top: 1px solid #3b372f; background: rgba(46,43,37,.9); }
+    .intro__status b { color: #f5ead8; font-weight: 600; }
+    .intro__bar { position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: #aebf92; }
+    .intro__skip { position: absolute; top: 16px; right: 16px; font: 600 12px "Figtree", system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase;
+                   color: #f5ead8; background: rgba(46,43,37,.7); border: 1px solid #5a5347; border-radius: 999px; padding: 6px 13px; cursor: pointer; }
+    .intro__skip:hover { background: #46512f; border-color: #46512f; }
   `;
   document.head.appendChild(style);
 
@@ -68,7 +68,7 @@
 
     // Start fully "unrendered", then clear buckets to reveal the real page underneath:
     // first a grainy pass, then a clean one.
-    ctx.fillStyle = "#111"; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = "#2e2b25"; ctx.fillRect(0, 0, W, H);
     const B = Math.max(48, Math.round(W / 22));
     const buckets = [];
     for (let y = 0; y < H; y += B) for (let x = 0; x < W; x += B) buckets.push([x, y]);
@@ -86,7 +86,7 @@
       for (let i = 0; i < img.data.length; i += 4) {
         const firefly = Math.random() < 0.006;
         const v = firefly ? 235 : 10 + Math.random() * 30;
-        img.data[i] = img.data[i + 1] = img.data[i + 2] = v;
+        img.data[i] = v + 12; img.data[i + 1] = v + 9; img.data[i + 2] = v + 4; // warm dark grain
         img.data[i + 3] = firefly ? 230 : 70 + Math.random() * 110;
       }
       gx.putImageData(img, 0, 0);

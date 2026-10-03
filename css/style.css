@@ -132,7 +132,7 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
   display: flex;
   flex-direction: column;
   gap: 70px;
-  padding: 0 19px;
+  padding: 35px 19px 0;   /* top lines up with the sidebar's inner padding */
 }
 /* Text-heavy pages keep a readable measure. */
 .content { max-width: 980px; width: 100%; }
@@ -141,7 +141,9 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
 
 /* ---------- Demo reel ---------- */
 
-.reel { display: flex; flex-direction: column; gap: 13px; }
+/* Reel (header + player) sits at 90% width, centered over the project grids. */
+.reel { width: 90%; align-self: center; }
+
 .reel__frame {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -150,14 +152,6 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
   background: var(--color-neutral-900);
 }
 .reel__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.reel__meta {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 13px;
-  font-weight: 600;
-  color: var(--color-neutral-700);
-}
 
 /* ---------- Project sections ---------- */
 
@@ -536,6 +530,7 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
   .sidebar__nav { flex-direction: row; flex-wrap: wrap; }
   .main { padding: 0; }
   .main--center { min-height: 0; padding-bottom: 0; }
+  .reel { width: 100%; }
 
   .tile { grid-column: 1 / -1; }
   .tile__frame { aspect-ratio: 16 / 9; }

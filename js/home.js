@@ -12,7 +12,7 @@
 
   // media types: img (still), loop (muted looping clip), film (video with controls), vimeo (embed)
   const PROJECTS = [
-    { title: "Honey Business", group: "g", roles: ["Lighting Artist", "Render Artist"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
+    { title: "Honey Business", logo: "honey-business", group: "g", roles: ["Lighting Artist", "Render Artist"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
       bullets: ["Tuned RenderMan path tracer settings to make dailies render 6–10x faster.",
         "Set up render layers and LPEs so compositors could control lights, objects and scattering types separately.",
         "Managed the production's render farm to keep shots moving."],
@@ -22,7 +22,7 @@
         { t: "img", src: S + "honey-business/f210.jpg", alt: "Honey pour" },
         { t: "vimeo", src: vimeo(1187515149), thumb: S + "honey-business/film-thumb.jpg", alt: "Honey Business full film", caption: "Full film · Password: watchBobo" },
       ] },
-    { title: "Sandwich Kwon Do", group: "g", roles: ["Lighting Artist", "Lighting TD"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
+    { title: "Sandwich Kwon Do", logo: "sandwich-kwon-do", group: "g", roles: ["Lighting Artist", "Lighting TD"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
       bullets: ["Led a team of lighters through lighting test shots and film sequences.",
         "Built stylized lighting tools for painterly volumetrics, depth of field and shadows.",
         "Optimized rendering tools for easier use and quicker iterations."],
@@ -31,7 +31,7 @@
         { t: "img", src: S + "sandwich-kwon-do/z030a.jpg", alt: "Lit window at night" },
         { t: "img", src: S + "sandwich-kwon-do/z030b.jpg", alt: "Storefront" },
       ] },
-    { title: "Scuttle", group: "g", stage: 2.39, roles: ["Lighting Lead"], sw: ["Unreal Engine 5"],
+    { title: "Scuttle", logo: "scuttle", group: "g", stage: 2.39, roles: ["Lighting Lead"], sw: ["Unreal Engine 5"],
       bullets: ["Led lighting in Unreal Engine 5, turning 2D concept art into 3D environments.",
         "Managed a team of lighters to keep the film consistent and cinematic on a tight schedule."],
       media: [
@@ -126,7 +126,12 @@
   function renderInfo() {
     const p = PROJECTS[state.open];
     $(".ov-kicker").textContent = p.group === "g" ? `${pad(state.open + 1)} · Group project` : "Personal project";
-    $(".ov-title").textContent = p.title;
+    const titleEl = $(".ov-title");
+    if (p.logo) {
+      titleEl.innerHTML = `<img class="logo logo--${p.logo} logo--lg" src="assets/logos/${p.logo}.png" alt="${esc(p.title)}">`;
+    } else {
+      titleEl.textContent = p.title;
+    }
     $(".ov-roles").innerHTML = p.roles.map((r) => `<span class="tag">${esc(r)}</span>`).join("");
     $(".ov-sw").innerHTML = p.sw.map((n) =>
       `<span class="sw"><img src="${IC + ICONS[n]}" alt="" width="18" height="18">${esc(n)}</span>`).join("");

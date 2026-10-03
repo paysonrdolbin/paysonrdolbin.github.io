@@ -204,6 +204,17 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
 .tile__title { font-family: var(--font-heading); font-size: 25px; line-height: 1.12; letter-spacing: -.015em; }
 .tile__meta { font-weight: 600; color: var(--color-neutral-700); }
 
+/* Film logos stand in for the text title on Honey Business and Scuttle. */
+.logo { display: block; width: auto; max-width: 100%; }
+.tile__text:has(.logo) { gap: 13px; }   /* more room between a logo and its caption */
+.logo--honey-business { height: 72px; }
+/* Wordmarks in the two-up row overflow the 28px title line equally, so their captions line up. */
+.logo--scuttle { height: 34px; margin: -3px 0; }
+.logo--sandwich-kwon-do { height: 40px; margin: -6px 0; }
+.logo--honey-business.logo--lg { height: 96px; }
+.logo--scuttle.logo--lg { height: 52px; margin: 8px 0; }
+.logo--sandwich-kwon-do.logo--lg { height: 64px; margin: 4.4px 0; }
+
 .site-footer {
   display: flex;
   justify-content: flex-end;

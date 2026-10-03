@@ -536,8 +536,11 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
   .tile { grid-column: 1 / -1; }
   .tile__frame { aspect-ratio: 16 / 9; }
 
-  .ov-panel { inset: 8px; padding: 22px; flex-direction: column; overflow-y: auto; }
-  .ov-info { width: auto; overflow: visible; }
+  .ov-panel { inset: 8px; padding: 22px; flex-direction: column; gap: 26px; overflow-y: auto; }
+  /* Flatten the info column so the Next button can sit below the gallery. */
+  .ov-info { display: contents; }
+  .ov-gallery { order: 1; }
+  .ov-next { order: 2; margin-top: 0; padding-top: 0; }
   .ov-stage-area { flex: none; container-type: normal; }
   .ov-stage { width: 100%; }
   .ov-zoom { inset: 8px; }

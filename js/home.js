@@ -12,45 +12,51 @@
 
   // media types: img (still), loop (muted looping clip), film (video with controls), vimeo (embed)
   const PROJECTS = [
-    { title: "Honey Business", logo: "honey-business", group: "g", roles: ["Lighting Artist", "Render Artist"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
-      bullets: ["Tuned RenderMan path tracer settings to make dailies render 6–10x faster.",
-        "Set up render layers and LPEs so compositors could control lights, objects and scattering types separately.",
-        "Managed the production's render farm to keep shots moving."],
+    { title: "Honey Business", logo: "honey-business", group: "g", roles: ["Lighting Artist", "Compositing Artist", "Render Artist"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
+      desc: ["As Render Lead, I optimized daily renders by 6-10x and was responsible for render layer setups and final renders for over 100 shots."],
+      facts: [["Crew", "68 members"], ["Lighting Team", "6 members"]],
       media: [
         { t: "img", src: S + "honey-business/c250.jpg", alt: "Bear close-up in the forest" },
         { t: "img", src: S + "honey-business/d040.jpg", alt: "Bear behind the garden gate" },
         { t: "img", src: S + "honey-business/f210.jpg", alt: "Honey pour" },
         { t: "vimeo", src: vimeo(1187515149), thumb: S + "honey-business/film-thumb.jpg", alt: "Honey Business full film", caption: "Full film · Password: watchBobo" },
       ] },
-    { title: "Sandwich Kwon Do", logo: "sandwich-kwon-do", group: "g", roles: ["Lighting Artist", "Lighting TD"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
-      bullets: ["Led a team of lighters through lighting test shots and film sequences.",
-        "Built stylized lighting tools for painterly volumetrics, depth of field and shadows.",
-        "Optimized rendering tools for easier use and quicker iterations."],
+    { title: "Sandwich Kwon Do", logo: "sandwich-kwon-do", wip: true, group: "g", roles: ["Lighting Artist", "Lighting TD", "Compositing Artist"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
+      desc: ["As a capstone project, BYU’s Center for Animation senior class is creating Sandwich Kwon-Do, set for release in April 2027.",
+        "In addition to working with the art director to develop the look of lighting across the film through test shots, I have begun lighting on the first sequence."],
+      facts: [["Crew", "40 members"], ["Lighting Team", "4 members"]],
       media: [
-        { t: "img", src: S + "sandwich-kwon-do/z020.jpg", alt: "Open sign in the shop window" },
-        { t: "img", src: S + "sandwich-kwon-do/z030a.jpg", alt: "Lit window at night" },
-        { t: "img", src: S + "sandwich-kwon-do/z030b.jpg", alt: "Storefront" },
+        { t: "img", src: S + "sandwich-kwon-do/a030.jpg", alt: "Yoon tightening an apron belt (A_030)" },
+        { t: "img", src: S + "sandwich-kwon-do/a050.jpg", alt: "Pointing at the shop menu (A_050)" },
+        { t: "img", src: S + "sandwich-kwon-do/a110.jpg", alt: "Wrapped sandwich on a tray (A_110)" },
       ] },
-    { title: "Scuttle", logo: "scuttle", group: "g", stage: 2.39, roles: ["Lighting Lead"], sw: ["Unreal Engine 5"],
-      bullets: ["Led lighting in Unreal Engine 5, turning 2D concept art into 3D environments.",
-        "Managed a team of lighters to keep the film consistent and cinematic on a tight schedule."],
+    { title: "Scuttle", logo: "scuttle", group: "g", stage: 2.39, roles: ["Lighting Artist"], sw: ["Unreal Engine 5"],
+      desc: ["To prepare for future projects and further develop our skills, BYU’s Class of 2027 made this short over the course of a summer. Working in Unreal Engine 5, I created the master rig for the primary environment and led a team of four lighters to achieve more shaping and visual direction in each shot."],
+      facts: [["Crew", "35 members"], ["Lighting Team", "4 members"]],
       media: [
         { t: "img", src: S + "scuttle/scuttle-04.jpg", alt: "Crabs meeting on the beach" },
         { t: "img", src: S + "scuttle/scuttle-01.jpg", alt: "Hermit crab under a leaf" },
         { t: "film", src: V + "scuttle.mp4", poster: V + "scuttle-poster.jpg", alt: "Scuttle full film", caption: "Full film" },
       ] },
-    { title: "Coral Reef", group: "p", roles: ["Lighting"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"], bullets: [],
+    { title: "Coral Reef", group: "p", roles: ["Lighting"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
+      desc: ["Inspired by my love for marine biology and great films like Finding Nemo, I tackled a personal project lighting a coral reef to better understand lighting and rendering caustics (and also how to fake them). Using a collection of models, I constructed the environment, added particle effects and volumetrics, and lit the scene."],
+      credits: ["Coral models by 3D-ModelsArtist (CGTrader)"],
       media: [{ t: "loop", src: V + "coral-reef.mp4", poster: V + "coral-reef-poster.jpg", alt: "Coral Reef clip" }] },
-    { title: "Coffee Shop", group: "p", roles: ["Lighting"], sw: ["Unreal Engine"], bullets: [],
+    { title: "Coffee Shop", group: "p", roles: ["Lighting"], sw: ["Unreal Engine"],
+      credits: ["Interior set by Leartes Studios (Fab)"],
       media: [{ t: "loop", src: V + "coffee-shop.mp4", poster: V + "coffee-shop-poster.jpg", alt: "Coffee Shop clip" }] },
-    { title: "Retro NES Composite", group: "p", roles: ["Lighting", "Compositing"], sw: ["Substance Painter", "Karma", "Nuke"], bullets: [],
+    { title: "Retro NES Composite", group: "p", roles: ["Lighting", "Compositing"], sw: ["Substance Painter", "Karma", "Nuke"],
+      desc: ["Retro Nintendo games have always been a passion of mine, so to better learn and understand Nuke, I shaded a model of an NES controller, lit it with a self-captured HDRI, and composited it into an image I took in my apartment."],
+      credits: ["Model by <em>coxy</em> (Sketchfab)"],
       media: [
         { t: "img", src: S + "retro-nes/nes-comp.jpg", alt: "Final composite", caption: "Composite" },
         { t: "img", src: S + "retro-nes/nes-without.jpg", alt: "Original render", caption: "Original Image" },
       ] },
-    { title: "Downtown West", group: "p", roles: ["Lighting"], sw: ["Unreal Engine"], bullets: [],
+    { title: "Downtown West", group: "p", roles: ["Lighting"], sw: ["Unreal Engine"],
+      credits: ["Exterior set by PurePolygons (Fab)"],
       media: [{ t: "loop", src: V + "downtown.mp4", poster: V + "downtown-poster.jpg", alt: "Downtown West clip" }] },
-    { title: "Ramen Bowl", group: "p", roles: ["All Aspects"], sw: ["Maya", "Substance Painter", "Arnold"], bullets: [],
+    { title: "Ramen Bowl", group: "p", roles: ["All Aspects"], sw: ["Maya", "Substance Painter", "Arnold"],
+      desc: ["Pork chashu sculpted in ZBrush. All models created in Maya, texturing in Substance Painter. Noodle placement achieved through Houdini vellum simulation. Lighting and rendering done in Maya and Arnold."],
       media: [{ t: "img", src: S + "ramen/ramen-01.jpg", alt: "Ramen bowl still life" }] },
   ];
 
@@ -85,7 +91,10 @@
         </div>
         <div class="tags ov-roles"></div>
         <div class="sw-row ov-sw"></div>
+        <div class="ov-desc"></div>
+        <dl class="ov-facts"></dl>
         <ul class="ov-bullets"></ul>
+        <div class="ov-credits"></div>
         <div class="ov-next"><button class="btn ov-next-btn" type="button"></button></div>
       </div>
       <div class="ov-gallery">
@@ -132,10 +141,17 @@
     } else {
       titleEl.textContent = p.title;
     }
+    // "(Work in Progress)" note under the title for unfinished films.
+    const wipEl = $(".ov-heading .wip");
+    if (wipEl) wipEl.remove();
+    if (p.wip) titleEl.insertAdjacentHTML("afterend", '<div class="wip">(Work in Progress)</div>');
     $(".ov-roles").innerHTML = p.roles.map((r) => `<span class="tag">${esc(r)}</span>`).join("");
     $(".ov-sw").innerHTML = p.sw.map((n) =>
       `<span class="sw"><img src="${IC + ICONS[n]}" alt="" width="18" height="18">${esc(n)}</span>`).join("");
-    $(".ov-bullets").innerHTML = p.bullets.map((b) => `<li>${esc(b)}</li>`).join("");
+    $(".ov-desc").innerHTML = (p.desc || []).map((d) => `<p>${esc(d)}</p>`).join("");
+    $(".ov-facts").innerHTML = (p.facts || []).map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+    $(".ov-bullets").innerHTML = (p.bullets || []).map((b) => `<li>${esc(b)}</li>`).join("");
+    $(".ov-credits").innerHTML = (p.credits || []).map((c) => `<p>${c}</p>`).join("");   // trusted, may contain <em>
     const next = PROJECTS[(state.open + 1) % PROJECTS.length];
     $(".ov-next-btn").innerHTML = `Next · ${esc(next.title)} ${I.arrow}`;
     info.scrollTop = 0;

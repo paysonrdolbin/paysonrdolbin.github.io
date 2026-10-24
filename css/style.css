@@ -207,6 +207,8 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
 /* Film logos stand in for the text title on Honey Business and Scuttle. */
 .logo { display: block; width: auto; max-width: 100%; }
 .tile__text:has(.logo) { gap: 13px; }   /* more room between a logo and its caption */
+.wip { font-weight: 600; color: var(--color-accent-700); }
+.tile__text .wip { margin-top: -4.4px; }   /* tuck the note up under the logo */
 .logo--honey-business { height: 72px; }
 /* Wordmarks in the two-up row overflow the 28px title line equally, so their captions line up. */
 .logo--scuttle { height: 34px; margin: -3px 0; }
@@ -334,6 +336,15 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
   text-wrap: pretty;
 }
 .ov-bullets:empty { display: none; }
+.ov-desc { display: flex; flex-direction: column; gap: 8px; text-wrap: pretty; }
+.ov-desc p { margin: 0; }
+.ov-facts { margin: 0; display: flex; flex-wrap: wrap; gap: 8px 26px; }
+.ov-facts div { display: flex; flex-direction: column; gap: 2px; }
+.ov-facts dt { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--color-accent-700); }
+.ov-facts dd { margin: 0; font-weight: 600; color: var(--color-neutral-800); }
+.ov-credits { color: var(--color-neutral-700); }
+.ov-credits p { margin: 0; }
+.ov-desc:empty, .ov-facts:empty, .ov-credits:empty { display: none; }
 .ov-next { margin-top: auto; padding-top: 13px; }
 
 .ov-gallery {

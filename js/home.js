@@ -13,7 +13,7 @@
   // media types: img (still), loop (muted looping clip), film (video with controls), vimeo (embed)
   const PROJECTS = [
     { title: "Honey Business", logo: "honey-business", group: "g", roles: ["Lighting Artist", "Compositing Artist", "Render Artist"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
-      desc: ["As Render Lead, I optimized daily renders by 6-10x and was responsible for render layer setups and final renders for over 100 shots."],
+      desc: ["Leading the rendering department, I optimized daily renders by 6-10x and was responsible for render layer setups and final renders for over 120 shots."],
       facts: [["Crew", "68 members"], ["Lighting Team", "6 members"]],
       media: [
         { t: "img", src: S + "honey-business/c250.jpg", alt: "Bear close-up in the forest" },

@@ -212,10 +212,10 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
 .logo--honey-business { height: 72px; }
 /* Wordmarks in the two-up row overflow the 28px title line equally, so their captions line up. */
 .logo--scuttle { height: 34px; margin: -3px 0; }
-.logo--sandwich-kwon-do { height: 40px; margin: -6px 0; }
+.logo--sandwich-kwon-do { height: 60px; }
 .logo--honey-business.logo--lg { height: 96px; }
 .logo--scuttle.logo--lg { height: 52px; margin: 8px 0; }
-.logo--sandwich-kwon-do.logo--lg { height: 64px; margin: 4.4px 0; }
+.logo--sandwich-kwon-do.logo--lg { height: 96px; }
 
 .site-footer {
   display: flex;

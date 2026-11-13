@@ -12,6 +12,16 @@
 
   // media types: img (still), loop (muted looping clip), film (video with controls), vimeo (embed)
   const PROJECTS = [
+    { title: "Sandwich Kwon Do", logo: "sandwich-kwon-do", wip: true, group: "g", roles: ["Lighting Artist", "Lighting TD", "Compositing Artist"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
+      desc: ["As a capstone project, BYU’s Center for Animation senior class is creating Sandwich Kwon Do, a short film about a Korean sandwich shop owner, Mr. Yoon, who combines Tae Kwon Do with his love of sandwich-making to defend his shop from a takeover by business tycoon Sam Whichman.",
+        "In addition to working with the art director to develop the look of lighting across the film through test shots, I have begun lighting and compositing on the first sequence."],
+      facts: [["Crew", "40 members"], ["Lighting Team", "4 members"]],
+      media: [
+        { t: "loop", src: V + "skd-a030.mp4", poster: V + "skd-a030-poster.jpg", alt: "Yoon tightening an apron belt" },
+        { t: "loop", src: V + "skd-a050.mp4", poster: V + "skd-a050-poster.jpg", alt: "Pointing at the shop menu" },
+        { t: "loop", src: V + "skd-a070.mp4", poster: V + "skd-a070-poster.jpg", alt: "Picking up a knife from the counter" },
+        { t: "loop", src: V + "skd-a110.mp4", poster: V + "skd-a110-poster.jpg", alt: "Wrapped sandwich on a tray" },
+      ] },
     { title: "Honey Business", logo: "honey-business", group: "g", roles: ["Lighting Artist", "Compositing Artist", "Render Artist"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
       desc: ["Leading the rendering department, I optimized daily renders by 6-10x and was responsible for render layer setups and final renders for over 120 shots."],
       facts: [["Crew", "68 members"], ["Lighting Team", "6 members"]],
@@ -21,15 +31,6 @@
         { t: "img", src: S + "honey-business/f210.jpg", alt: "Honey pour" },
         { t: "vimeo", src: vimeo(1187515149), thumb: S + "honey-business/film-thumb.jpg", alt: "Honey Business full film", caption: "Full film · Password: watchBobo" },
       ] },
-    { title: "Sandwich Kwon Do", logo: "sandwich-kwon-do", wip: true, group: "g", roles: ["Lighting Artist", "Lighting TD", "Compositing Artist"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
-      desc: ["As a capstone project, BYU’s Center for Animation senior class is creating Sandwich Kwon-Do, set for release in April 2027.",
-        "In addition to working with the art director to develop the look of lighting across the film through test shots, I have begun lighting on the first sequence."],
-      facts: [["Crew", "40 members"], ["Lighting Team", "4 members"]],
-      media: [
-        { t: "img", src: S + "sandwich-kwon-do/a030.jpg", alt: "Yoon tightening an apron belt (A_030)" },
-        { t: "img", src: S + "sandwich-kwon-do/a050.jpg", alt: "Pointing at the shop menu (A_050)" },
-        { t: "img", src: S + "sandwich-kwon-do/a110.jpg", alt: "Wrapped sandwich on a tray (A_110)" },
-      ] },
     { title: "Scuttle", logo: "scuttle", group: "g", stage: 2.39, roles: ["Lighting Artist"], sw: ["Unreal Engine 5"],
       desc: ["To prepare for future projects and further develop our skills, BYU’s Class of 2027 made this short over the course of a summer. Working in Unreal Engine 5, I created the master rig for the primary environment and led a team of four lighters to achieve more shaping and visual direction in each shot."],
       facts: [["Crew", "35 members"], ["Lighting Team", "4 members"]],
@@ -38,10 +39,14 @@
         { t: "img", src: S + "scuttle/scuttle-01.jpg", alt: "Hermit crab under a leaf" },
         { t: "film", src: V + "scuttle.mp4", poster: V + "scuttle-poster.jpg", alt: "Scuttle full film", caption: "Full film" },
       ] },
-    { title: "Coral Reef", group: "p", roles: ["Lighting"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
+    { title: "Coral Reef", group: "p", roles: ["Lighting", "Compositing"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
       desc: ["Inspired by my love for marine biology and great films like Finding Nemo, I tackled a personal project lighting a coral reef to better understand lighting and rendering caustics (and also how to fake them). Using a collection of models, I constructed the environment, added particle effects and volumetrics, and lit the scene."],
       credits: ["Coral models by 3D-ModelsArtist (CGTrader)"],
       media: [{ t: "loop", src: V + "coral-reef.mp4", poster: V + "coral-reef-poster.jpg", alt: "Coral Reef clip" }] },
+    { title: "Living Room", group: "p", roles: ["Lighting", "Compositing"], sw: ["Houdini/Solaris", "RenderMan", "Nuke"],
+      desc: ["My lighting professor often speaks to the difficulty of lighting a simple interior at midday, and I took that as a challenge to push my ability as a lighter. After set dressing the scene and adding a camera, I used primarily practical lights and minimal additional lights to light this scene for midday. Additional setups for night and early morning are also in progress."],
+      credits: ["Interior set by MaximDorokhov (Fab)", "Additional models from Kitbash"],
+      media: [{ t: "loop", src: V + "living-room.mp4", poster: V + "living-room-poster.jpg", alt: "Living room going from night to morning" }] },
     { title: "Coffee Shop", group: "p", roles: ["Lighting"], sw: ["Unreal Engine"],
       credits: ["Interior set by Leartes Studios (Fab)"],
       media: [
@@ -60,13 +65,11 @@
       media: [
         { t: "img", src: S + "retro-nes/nes-comp.jpg", alt: "Final composite", caption: "Composite" },
         { t: "img", src: S + "retro-nes/nes-without.jpg", alt: "Original render", caption: "Original Image" },
+        { t: "loop", src: V + "nes-turnaround.mp4", poster: V + "nes-turnaround-poster.jpg", alt: "NES controller turnaround", caption: "Turnaround" },
       ] },
     { title: "Downtown West", group: "p", roles: ["Lighting"], sw: ["Unreal Engine"],
       credits: ["Exterior set by PurePolygons (Fab)"],
       media: [{ t: "loop", src: V + "downtown.mp4", poster: V + "downtown-poster.jpg", alt: "Downtown West clip" }] },
-    { title: "Ramen Bowl", group: "p", roles: ["All Aspects"], sw: ["Maya", "Substance Painter", "Arnold"],
-      desc: ["Pork chashu sculpted in ZBrush. All models created in Maya, texturing in Substance Painter. Noodle placement achieved through Houdini vellum simulation. Lighting and rendering done in Maya and Arnold."],
-      media: [{ t: "img", src: S + "ramen/ramen-01.jpg", alt: "Ramen bowl still life" }] },
   ];
 
   // ---------- Icons (Lucide, stroke 2.75) ----------
@@ -150,10 +153,10 @@
     } else {
       titleEl.textContent = p.title;
     }
-    // "(Work in Progress)" note under the title for unfinished films.
+    // Release note under the title for unfinished films.
     const wipEl = $(".ov-heading .wip");
     if (wipEl) wipEl.remove();
-    if (p.wip) titleEl.insertAdjacentHTML("afterend", '<div class="wip">(Work in Progress)</div>');
+    if (p.wip) titleEl.insertAdjacentHTML("afterend", '<div class="wip">Expected Release: April 2027</div>');
     $(".ov-roles").innerHTML = p.roles.map((r) => `<span class="tag">${esc(r)}</span>`).join("");
     $(".ov-sw").innerHTML = p.sw.map((n) =>
       `<span class="sw"><img src="${IC + ICONS[n]}" alt="" width="18" height="18">${esc(n)}</span>`).join("");
